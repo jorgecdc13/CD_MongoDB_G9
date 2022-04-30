@@ -1,0 +1,67 @@
+Bruno Martins: para criar a collection fiz isto
+const database = 'cd-v3';
+const collection = 'banco';
+
+// The current database to use.
+use(database);
+
+// Create a new collection.
+db.createCollection(collection);
+
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('cd-v3');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+//db.banco.drop();
+
+// Insert a few documents into the sales collection.
+db.banco.insertMany([
+  { 'personId': 1, 'personName': 'abc', 'personAge': 10, 'personNIF': 2, 'creationDate': new Date('2014-03-01T08:00:00Z') },
+  { 'personId': 2, 'personName': 'jkl', 'personAge': 20, 'personNIF': 1, 'creationDate': new Date('2014-03-01T09:00:00Z') },
+  { 'personId': 3, 'personName': 'xyz', 'personAge': 5, 'personNIF': 10, 'creationDate': new Date('2014-03-15T09:00:00Z') },
+  { 'personId': 4, 'personName': 'xyz', 'personAge': 5, 'personNIF':  20, 'creationDate': new Date('2014-04-04T11:21:39.736Z') },
+  { 'personId': 5, 'personName': 'abc', 'personAge': 10, 'personNIF': 10, 'creationDate': new Date('2014-04-04T21:23:13.331Z') },
+  { 'personId': 6, 'personName': 'def', 'personAge': 7.5, 'personNIF': 5, 'creationDate': new Date('2015-06-04T05:08:13Z') },
+  { 'personId': 7, 'personName': 'def', 'personAge': 7.5, 'personNIF': 10, 'creationDate': new Date('2015-09-10T08:43:00Z') },
+  { 'personId': 8, 'personName': 'abc', 'personAge': 10, 'personNIF': 5, 'creationDate': new Date('2016-02-06T20:20:13Z') },
+]);
+
+use('cd-v3');
+db.banco.insertMany([
+  { 'personId': 1, 'personName': 'abc', 'personAge': 10, 'personNIF': 2, 'creationDate': new Date('2014-03-01T08:00:00Z'), 'cenas' : 123 },
+  { 'personId': 2, 'personName': 'jkl', 'personAge': 20, 'personNIF': 1, 'creationDate': new Date('2014-03-01T09:00:00Z'), 'cenas2' : 456 },
+]);
+
+use('cd-v3');
+db.banco.insertMany([
+  { 'personId': 1, 'personName': 'abc', 'conta' : {
+    'nomeConta': 'asd',
+    'idConta' : 123,
+    'saldo' : 1000,
+    contaExite: true,
+  } },
+]);
+
+
+// Run a find command to view personNames sold on April 4th, 2014.
+db.banco.find({ creationDate: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+use('cd-v3');
+db.banco.find({ personName:"abc" })
+
+// Build an aggregation to view total sales for each product in 2014.
+const aggregation = [
+  { $match: { creationDate: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+  { $group: { personId: '$personName', totalSaleAmount: { $sum: { $multiply: [ '$personAge', '$personNIF' ] } } } }
+];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+db.banco.aggregate(aggregation);

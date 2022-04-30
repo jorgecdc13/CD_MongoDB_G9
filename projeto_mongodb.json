@@ -1,0 +1,108 @@
+// Modulo conta
+{
+    "tipo": "conta",
+    "_id": "100",
+    "n_conta": 101100111,
+    "nib": "101100111-100",
+    "tipo_de_conta": "",
+    "cartoes": [7777,8888],
+    "saldo": ""
+}
+
+// Modulo cliente
+{
+    "tipo": "cliente",
+    "nif": "",
+    "nome": "",
+    "telemovel": "",
+    "tipo_titular": "",
+    "situacao_laboral": "",
+    "rendimento_anual": "",
+    "conta": 100
+}
+
+// Modulo colaborador
+{
+    "tipo": "colaborador",
+    "nome": "",
+    "telemovel": "",
+    "nif": ""
+}
+
+// Modulo movimento
+{
+    "tipo": "movimento",
+    "id_mov": "",
+    "tipo_de_conta" : "",
+    "conta_dest": "",
+    "conta_origem" : "",
+    "valor": ""
+}
+
+// Modulo cartão
+{
+    "tipo": "cartao",
+    "_id": 7777,
+    "n_cartao": "101100111101100111",
+    "pin": "1234",
+    "tipo_cartao": "deb" // criar cartão aleatorio crédito
+}
+
+// Modulo ação
+{
+    "tipo": "acao",
+    "_id_acao": "",
+    "tipo_acao": ""
+}
+
+//Entidades derivadas de Disjoints
+// c_prazo
+{
+    "tipo": "c_prazo",
+    "_id_cprazo": "",
+    "taxa_juro": ""
+}
+
+// c_acoes
+{
+    "tipo": "c_acoes",
+    "_id_acoes": ""
+}
+
+// i_acoes
+{
+    "tipo": "i_acoes",
+    "_id_acoes": "",
+    "quantidade": ""
+}
+
+// ações
+{
+    "tipo": "acoes",
+    "_id_stock": "",
+    "nome": "",
+    "empresa": ""
+}
+
+// pagamento estado
+{
+    "tipo": "pagamento_estado",
+    "_id_pagamento_est": "",
+    "referencia": ""
+}
+
+// pagamento servicos
+{
+    "tipo": "pagamento_servicos",
+    "_id_pagamento_serv": "",
+    "referencia": "",
+    "entidade": ""
+}
+
+// debito direto
+{
+    "tipo": "deb_direto",
+    "_id_deb_direto": "",
+    "entidade": "",
+    "bool": ""
+}
