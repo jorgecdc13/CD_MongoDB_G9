@@ -1,0 +1,51 @@
+    //Entidades derivadas de Disjoints
+    // c_prazo
+    {
+        "tipo": "c_prazo",
+        "_id_cprazo": "",
+        "taxa_juro": ""
+    },
+
+    // c_acoes
+    {
+        "tipo": "c_acoes",
+        "_id_acoes": ""
+    },
+
+    // i_acoes
+    {
+        "tipo": "i_acoes",
+        "_id_acoes": "",
+        "quantidade": ""
+    },
+
+    // ações
+    {
+        "tipo": "acoes",
+        "_id_stock": "",
+        "nome": "",
+        "empresa": ""
+    },
+
+    // pagamento estado
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": "",
+        "referencia": ""
+    },
+
+    // pagamento servicos
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": "",
+        "referencia": "",
+        "entidade": ""
+    },
+
+    // debito direto
+    {
+        "tipo": "deb_direto",
+        "_id_deb_direto": "",
+        "entidade": "",
+        "bool": ""
+    }

@@ -1,108 +1,316 @@
-// Modulo conta
-{
-    "tipo": "conta",
-    "_id": "100",
-    "n_conta": 101100111,
-    "nib": "101100111-100",
-    "tipo_de_conta": "",
-    "cartoes": [7777,8888],
-    "saldo": ""
-}
+[
+    {
+        "tipo": "conta",
+        "_id": 100,
+        "n_conta": 101100111,
+        "nib": "101100111-101",
+        "tipo_de_conta": "Conta a Prazo",
+        "cartoes": [7777, 7778],
+        "saldo": "5000"
+    }, {
+        "tipo": "conta",
+        "_id": 101,
+        "n_conta": 101100112,
+        "nib": "101100111-102",
+        "tipo_de_conta": "Conta a Prazo",
+        "cartoes": 7779,
+        "saldo": "8000"
+    }, {
+        "tipo": "conta",
+        "_id": 102,
+        "n_conta": 101100113,
+        "nib": "101100111-103",
+        "tipo_de_conta": "Conta de Açoes",
+        "cartoes": 7780,
+        "saldo": "90000",
+        "_id_stock":[2,3,5]
+    }, {
+        "tipo": "conta",
+        "_id": 103,
+        "n_conta": 101100114,
+        "nib": "101100111-104",
+        "tipo_de_conta": "Conta a Prazo",
+        "cartoes": 7781,
+        "saldo": "100000"
+    }, {
+        "tipo": "conta",
+        "_id": 104,
+        "n_conta": 101100115,
+        "nib": "101100111-105",
+        "tipo_de_conta": "Conta a Prazo",
+        "cartoes": [7781, 7782],
+        "saldo": "25000"
+    },
 
-// Modulo cliente
-{
-    "tipo": "cliente",
-    "nif": "",
-    "nome": "",
-    "telemovel": "",
-    "tipo_titular": "",
-    "situacao_laboral": "",
-    "rendimento_anual": "",
-    "conta": 100
-}
+    {
+        "tipo": "cliente",
+        "nif": 251437888,
+        "nome": "Jorge Ramos",
+        "telemovel": 969918230,
+        "tipo_titular": "Principal",
+        "situacao_laboral": "Empregado",
+        "rendimento_anual": 250000,
+        "conta": 101100111
+    }, {
+        "tipo": "cliente",
+        "nif": 251437880,
+        "nome": "Rui Boto",
+        "telemovel": 969918231,
+        "tipo_titular": "Principal",
+        "situacao_laboral": "Empregado",
+        "rendimento_anual": 250000,
+        "conta": 101100112
+    }, {
+        "tipo": "cliente",
+        "nif": 251437881,
+        "nome": "João Nunes",
+        "telemovel": 969918232,
+        "tipo_titular": "Principal",
+        "situacao_laboral": "Empregado",
+        "rendimento_anual": 250000,
+        "conta": 101100113
+    }, {
+        "tipo": "cliente",
+        "nif": 251437882,
+        "nome": "José Fonte",
+        "telemovel": 969918233,
+        "tipo_titular": "Secundário",
+        "situacao_laboral": "Desempregado",
+        "rendimento_anual": 12000,
+        "conta": 101100114
+    }, {
+        "tipo": "cliente",
+        "nif": 251437883,
+        "nome": "Pedro Gonçalves",
+        "telemovel": 969918234,
+        "tipo_titular": "Secundário",
+        "situacao_laboral": "Empregado",
+        "rendimento_anual": 600000,
+        "conta": 101100115
+    },
 
-// Modulo colaborador
-{
-    "tipo": "colaborador",
-    "nome": "",
-    "telemovel": "",
-    "nif": ""
-}
+    {
+        "tipo": "colaborador",
+        "nome": "João André",
+        "telemovel": 967733661,
+        "nif": 251437876
+    },
+    {
+        "tipo": "colaborador",
+        "nome": "Maria Fonte",
+        "telemovel": 967733662,
+        "nif": 251437877
+    },
+    {
+        "tipo": "colaborador",
+        "nome": "André Ferreira",
+        "telemovel": 967733663,
+        "nif": 251437878
+    },
+    {
+        "tipo": "colaborador",
+        "nome": "Mariana da Silva",
+        "telemovel": 967733664,
+        "nif": 251437812
+    },
+    {
+        "tipo": "colaborador",
+        "nome": "António de Sá",
+        "telemovel": 967733665,
+        "nif": 251437813
+    },
 
-// Modulo movimento
-{
-    "tipo": "movimento",
-    "id_mov": "",
-    "tipo_de_conta" : "",
-    "conta_dest": "",
-    "conta_origem" : "",
-    "valor": ""
-}
+    {
+        "tipo": "movimento",
+        "_id": 1,
+        "conta_dest": 101100112,
+        "conta_origem": 101100114,
+        "valor": 50
+    },
+    {
+        "tipo": "movimento",
+        "_id": 2,
+        "conta_dest": 101100110,
+        "conta_origem": 101100114,
+        "valor": 100
+    },
+    {
+        "tipo": "movimento",
+        "_id": 3,
+        "conta_dest": 101100115,
+        "conta_origem": 101100112,
+        "valor": 201
+    },
+    {
+        "tipo": "movimento",
+        "_id": 4,
+        "conta_dest": 101100114,
+        "conta_origem": 101100111,
+        "valor": 75
+    },
+    {
+        "tipo": "movimento",
+        "_id": 5,
+        "conta_dest": 101100111,
+        "conta_origem": 101100114,
+        "valor": 500
+    },
 
-// Modulo cartão
-{
-    "tipo": "cartao",
-    "_id": 7777,
-    "n_cartao": "101100111101100111",
-    "pin": "1234",
-    "tipo_cartao": "deb" // criar cartão aleatorio crédito
-}
+    {
+        "tipo": "cartao",
+        "_id": 7777,
+        "n_cartao": 101100111101100111,
+        "pin": 1234,
+        "tipo_cartao": "debito"
+    }, {
+        "tipo": "cartao",
+        "_id": 7778,
+        "n_cartao": 101100111101100112,
+        "pin": 1235,
+        "tipo_cartao": "debito" 
+    }, {
+        "tipo": "cartao",
+        "_id": 7779,
+        "n_cartao": 101100111101100113,
+        "pin": 1236,
+        "tipo_cartao": "credito"
+    }, {
+        "tipo": "cartao",
+        "_id": 7780,
+        "n_cartao": 101100111101100114,
+        "pin": 1237,
+        "tipo_cartao": "credito" 
+    }, {
+        "tipo": "cartao",
+        "_id": 7781,
+        "n_cartao": 101100111101100115,
+        "pin": 1238,
+        "tipo_cartao": "debito"
+    }, {
+        "tipo": "cartao",
+        "_id": 7782,
+        "n_cartao": 101100111101100116,
+        "pin": 1239,
+        "tipo_cartao": "credito" 
+    },
 
-// Modulo ação
-{
-    "tipo": "acao",
-    "_id_acao": "",
-    "tipo_acao": ""
-}
+    {
+        "tipo": "acoes",
+        "_id_stock": 1,
+        "nome": "AAPL",
+        "empresa": "APPLE"
+    },
+    {
+        "tipo": "acoes",
+        "_id_stock": 2,
+        "nome": "MSFT",
+        "empresa": "MICROSOFT"
+    },
+    {
+        "tipo": "acoes",
+        "_id_stock": 3,
+        "nome": "NVDA",
+        "empresa": "NVIDIA"
+    },
+    {
+        "tipo": "acoes",
+        "_id_stock": 4,
+        "nome": "TSLA",
+        "empresa": "TESLA"
+    },
+    {
+        "tipo": "acoes",
+        "_id_stock": 5,
+        "nome": "IBM",
+        "empresa": "IBM"
+    },
 
-//Entidades derivadas de Disjoints
-// c_prazo
-{
-    "tipo": "c_prazo",
-    "_id_cprazo": "",
-    "taxa_juro": ""
-}
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": 1,
+        "referencia": 2766,
+        "conta":101100114
+    },
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": 2,
+        "referencia": 2767,
+        "conta":101100111
+    },
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": 3,
+        "referencia": 2768,
+        "conta":101100113
+    },
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": 4,
+        "referencia": 2769,
+        "conta":101100114
+    },
+    {
+        "tipo": "pagamento_estado",
+        "_id_pagamento_est": 5,
+        "referencia": 2770,
+        "conta":101100115
+    },
+    
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": 1,
+        "referencia": 2237,
+        "entidade": 8876,
+        "conta":101100113
+    },
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": 2,
+        "referencia": 2238,
+        "entidade": 8877,
+        "conta":101100114
+    },
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": 3,
+        "referencia": 2239,
+        "entidade": 8877,
+        "conta":101100114
+    },
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": 4,
+        "referencia": 2220,
+        "entidade": 8860,
+        "conta":101100149
+    },
+    {
+        "tipo": "pagamento_servicos",
+        "_id_pagamento_serv": 5,
+        "referencia": 2221,
+        "entidade": 8861,
+        "conta":101100188
+    },
 
-// c_acoes
-{
-    "tipo": "c_acoes",
-    "_id_acoes": ""
-}
-
-// i_acoes
-{
-    "tipo": "i_acoes",
-    "_id_acoes": "",
-    "quantidade": ""
-}
-
-// ações
-{
-    "tipo": "acoes",
-    "_id_stock": "",
-    "nome": "",
-    "empresa": ""
-}
-
-// pagamento estado
-{
-    "tipo": "pagamento_estado",
-    "_id_pagamento_est": "",
-    "referencia": ""
-}
-
-// pagamento servicos
-{
-    "tipo": "pagamento_servicos",
-    "_id_pagamento_serv": "",
-    "referencia": "",
-    "entidade": ""
-}
-
-// debito direto
-{
-    "tipo": "deb_direto",
-    "_id_deb_direto": "",
-    "entidade": "",
-    "bool": ""
-}
+    {
+        "tipo": "deb_direto",
+        "_id_deb_direto": 1,
+        "entidade": 2231,
+        "conta":101100111,
+        "valor":50
+    },
+    {
+        "tipo": "deb_direto",
+        "_id_deb_direto": 2,
+        "entidade": 2231,
+        "conta":101100112,
+        "valor":150
+    },
+    {
+        "tipo": "deb_direto",
+        "_id_deb_direto": 3,
+        "entidade": 2235,
+        "conta":101100113,
+        "valor":30
+    }
+]
