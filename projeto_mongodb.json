@@ -1,12 +1,11 @@
-[
-    {
+[{
         "tipo": "conta",
         "_id": 100,
         "n_conta": 101100111,
         "nib": "101100111-101",
         "tipo_de_conta": "Conta a Prazo",
         "cartoes": [7777, 7778],
-        "saldo": "5000"
+        "saldo": 5000
     }, {
         "tipo": "conta",
         "_id": 101,
@@ -14,7 +13,7 @@
         "nib": "101100111-102",
         "tipo_de_conta": "Conta a Prazo",
         "cartoes": 7779,
-        "saldo": "8000"
+        "saldo": 8000
     }, {
         "tipo": "conta",
         "_id": 102,
@@ -22,8 +21,8 @@
         "nib": "101100111-103",
         "tipo_de_conta": "Conta de Açoes",
         "cartoes": 7780,
-        "saldo": "90000",
-        "_id_stock":[2,3,5]
+        "saldo": 90000,
+        "_id_stock": [2, 3, 5]
     }, {
         "tipo": "conta",
         "_id": 103,
@@ -31,7 +30,7 @@
         "nib": "101100111-104",
         "tipo_de_conta": "Conta a Prazo",
         "cartoes": 7781,
-        "saldo": "100000"
+        "saldo": 100000
     }, {
         "tipo": "conta",
         "_id": 104,
@@ -39,7 +38,7 @@
         "nib": "101100111-105",
         "tipo_de_conta": "Conta a Prazo",
         "cartoes": [7781, 7782],
-        "saldo": "25000"
+        "saldo": 25000
     },
 
     {
@@ -167,7 +166,7 @@
         "_id": 7778,
         "n_cartao": 101100111101100112,
         "pin": 1235,
-        "tipo_cartao": "debito" 
+        "tipo_cartao": "debito"
     }, {
         "tipo": "cartao",
         "_id": 7779,
@@ -179,7 +178,7 @@
         "_id": 7780,
         "n_cartao": 101100111101100114,
         "pin": 1237,
-        "tipo_cartao": "credito" 
+        "tipo_cartao": "credito"
     }, {
         "tipo": "cartao",
         "_id": 7781,
@@ -191,7 +190,7 @@
         "_id": 7782,
         "n_cartao": 101100111101100116,
         "pin": 1239,
-        "tipo_cartao": "credito" 
+        "tipo_cartao": "credito"
     },
 
     {
@@ -229,88 +228,88 @@
         "tipo": "pagamento_estado",
         "_id_pagamento_est": 1,
         "referencia": 2766,
-        "conta":101100114
+        "conta": 101100114
     },
     {
         "tipo": "pagamento_estado",
         "_id_pagamento_est": 2,
         "referencia": 2767,
-        "conta":101100111
+        "conta": 101100111
     },
     {
         "tipo": "pagamento_estado",
         "_id_pagamento_est": 3,
         "referencia": 2768,
-        "conta":101100113
+        "conta": 101100113
     },
     {
         "tipo": "pagamento_estado",
         "_id_pagamento_est": 4,
         "referencia": 2769,
-        "conta":101100114
+        "conta": 101100114
     },
     {
         "tipo": "pagamento_estado",
         "_id_pagamento_est": 5,
         "referencia": 2770,
-        "conta":101100115
+        "conta": 101100115
     },
-    
+
     {
         "tipo": "pagamento_servicos",
         "_id_pagamento_serv": 1,
         "referencia": 2237,
         "entidade": 8876,
-        "conta":101100113
+        "conta": 101100113
     },
     {
         "tipo": "pagamento_servicos",
         "_id_pagamento_serv": 2,
         "referencia": 2238,
         "entidade": 8877,
-        "conta":101100114
+        "conta": 101100114
     },
     {
         "tipo": "pagamento_servicos",
         "_id_pagamento_serv": 3,
         "referencia": 2239,
         "entidade": 8877,
-        "conta":101100114
+        "conta": 101100114
     },
     {
         "tipo": "pagamento_servicos",
         "_id_pagamento_serv": 4,
         "referencia": 2220,
         "entidade": 8860,
-        "conta":101100149
+        "conta": 101100149
     },
     {
         "tipo": "pagamento_servicos",
         "_id_pagamento_serv": 5,
         "referencia": 2221,
         "entidade": 8861,
-        "conta":101100188
+        "conta": 101100188
     },
 
     {
         "tipo": "deb_direto",
         "_id_deb_direto": 1,
         "entidade": 2231,
-        "conta":101100111,
-        "valor":50
+        "conta": 101100111,
+        "valor": 50
     },
     {
         "tipo": "deb_direto",
         "_id_deb_direto": 2,
         "entidade": 2231,
-        "conta":101100112,
-        "valor":150
+        "conta": 101100112,
+        "valor": 150
     },
     {
         "tipo": "deb_direto",
         "_id_deb_direto": 3,
         "entidade": 2235,
-        "conta":101100113,
-        "valor":30
+        "conta": 101100113,
+        "valor": 30
     }
 ]
